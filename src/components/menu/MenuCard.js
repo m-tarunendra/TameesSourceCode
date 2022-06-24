@@ -61,13 +61,6 @@ const MenuCard = (props) => {
               Add to Cart
             </button>
           )}
-          {quantityCount(state, id) > 0 && (
-            <a
-            className="new"
-            >
-              <b>Quantity : </b>{quantityCount(state, id)}
-            </a>
-          )}
           {quantityCount(state, id) === 1 && (
             <button
               className={styles.removeButton}
@@ -94,6 +87,7 @@ const MenuCard = (props) => {
         <img src={image} alt={name} />
         <p className={isOpen ? styles.detailsText : styles.hidden}>{details}</p>
         <p className={isOpen ? styles.detailsText : styles.hidden}>calories : 560 cal</p>
+        <p className={isOpen ? styles.detailsText : styles.hidden}>Allergens : Wheat, Eggs</p>
         <button className={styles.backButton} onClick={clickHandler}>
           back
         </button>
